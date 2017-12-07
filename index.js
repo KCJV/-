@@ -8,8 +8,8 @@ res.write('<script>socket.on("msg",(e)=>{eval(e.script)})</script>')
 res.end()
 }).listen(process.env.PORT||3000,()=>{console.log("Здравствуйте!")})
 ).on("connection",(socket)=>{
-w.i=Math.random()
-obj[w.i]={x:0,y:0,xs:0,ys:0}
+socket.i=Math.random()
+obj[socket.i]={x:0,y:0,xs:0,ys:0}
 socket.emit("msg",{script:'k=[]'})
 socket.emit("msg",{script:'document.body.style.margin="0"'})
 socket.emit("msg",{script:'c=document.createElement("canvas")'})
