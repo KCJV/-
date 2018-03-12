@@ -1,1 +1,10 @@
-Hello world!
+<script>
+setTimeout(()=>{
+  c=document.createElement("canvas")
+  document.body.appendChild(c)
+  setInterval(()=>{
+    c.width=innerWidth
+    c.height=innerHeight
+  },1)
+},1)
+</script>
