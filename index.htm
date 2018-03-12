@@ -3,6 +3,7 @@ setTimeout(()=>{
   document.body.style.margin=0
   c=document.createElement("canvas")
   document.body.appendChild(c)
+  ctx=c.getContext("2d")
   setInterval(()=>{
     c.width=innerWidth
     c.height=innerHeight
