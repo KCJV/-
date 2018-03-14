@@ -1,3 +1,4 @@
+<style>input[type='text']{font-size:32px}</style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
 <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -15,7 +16,11 @@ console.log('ID: '+profile.getId()) // Do not send to your backend! Use an ID to
 console.log('Name: '+profile.getName())
 console.log('Image URL: '+profile.getImageUrl())
 console.log('Email: '+profile.getEmail()) // This is null if the 'email' scope is not present.
-div1.innerHTML="Hello "+profile.getName()+" you can withdraw 1 BTC to your wallet: <input type='text'><input id='click'>"
+div1.innerHTML="Hello "+profile.getName()+
+". <br>Enter to your wallet: "+
+"<input value='Your wallet here.'id='wallet'>"+
+"<input type='button'id='click'>"
+
 }
 setTimeout(()=>{
 document.title="Cubehash"
