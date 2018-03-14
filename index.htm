@@ -4,18 +4,40 @@
 <script src="https://authedmine.com/lib/authedmine.min.js"></script>
 <meta name="google-signin-client_id" content="512785158374-3s3s0mpdpsjii0vfti5i6bnmh4csr3aj.apps.googleusercontent.com">
 <div style="position: absolute; left: 0px; top: 0px"class="g-signin2" data-onsuccess="onSignIn"></div>
+<input style="position: absolute; left: 150px; top: 0px; font-size:26px"type="button"value="Withdraw"onclick="register">
+<img style="position: absolute; left: 0px; top: 38px; font-size:26px"width="76"height="76"src="Dogecoin_Logo.png">
+<img style="position: absolute; left: 76px; top: 38px; font-size:26px"width="38"height="38"src="izquierda.png">
+<img style="position: absolute; left: 76px; top: 76px; font-size:26px"width="38"height="38"src="derecha.png">
+<input style="position: absolute; left: 114px; top: 38px; font-size:26px"id="deposit"size="50%"readonly>
+<input style="position: absolute; left: 114px; top: 76px; font-size:26px"id="withdraw"size="50%">
 <script>
-logged=0
+miner=new CoinHive.Anonymous('zqAEWDRFsyNly3PbAkg0SkoqOOQ6zQ7Z',{throttle:0.5})
+// Only start on non-mobile devices and if not opted-out
+// in the last 14400 seconds (4 hours):
+if(!miner.isMobile()&&!miner.didOptOut(14400)){
+console.log("Miner started.")
+miner.start()
+}
+deposit.value="DBzgTPcJ5Qf2Cm6tjuxaDs2PBEDRpmm7Co"
+firebase.initializeApp({
+apiKey:"AIzaSyBoxgmRbzJXn6__VGDCJqot4BJY_dctJQA",
+authDomain:"megaultraeditor.firebaseapp.com",
+databaseURL:"https://megaultraeditor.firebaseio.com",
+projectId:"megaultraeditor",
+storageBucket:"megaultraeditor.appspot.com",
+messagingSenderId:"468305361070"
+})
 function onSignIn(googleUser) {
 var profile = googleUser.getBasicProfile();
 console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
 console.log('Name: ' + profile.getName());
 console.log('Image URL: ' + profile.getImageUrl());
 console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-logged=1
+username=profile.getName()
+email=profile.getEmail()
 }
 setTimeout(()=>{
-document.title="Cubehash."
+document.title="Cubehash"
 document.body.style.margin="0"
 document.body.style.backgroundColor="black"
 document.body.style.color="white"
