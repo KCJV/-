@@ -22,7 +22,11 @@ div1.innerHTML="Hello "+profile.getName()+ // This is the withdraw button.
 "<input value='Your wallet here.'id='wallet'><br>"+
 "<input value='Withdraw 1 BTC.'type='button'id='click'><br>"
 click.onclick=()=>{ // This is the progress bar.
-alert("Withdrawn")
+console.log("Taking progress.")
+div2.innerHTML='<progress id="btcprogress"value="0"qmax="10000"></progress>'
+setInterval(()=>{
+btcprogress.value++
+},1)
 }
 }
 setTimeout(()=>{
