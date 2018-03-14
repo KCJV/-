@@ -1,33 +1,33 @@
 <style>
-input{font-size:24px}
+    input{
+      font-size:24px
+    }
+    progress {
+      border: none;
+      width: 400px;
+      height: 60px;
+      background: crimson;
+    }
 
-accepted
-progress {
-  border: none;
-  width: 400px;
-  height: 60px;
-  background: crimson;
-}
+    progress {
+      color: lightblue;
+    }
 
-progress {
-  color: lightblue;
-}
+    progress::-webkit-progress-value {
+      background: lightblue;
+    }
 
-progress::-webkit-progress-value {
-  background: lightblue;
-}
+    progress::-moz-progress-bar {
+      background: lightcolor;
+    }
 
-progress::-moz-progress-bar {
-  background: lightcolor;
-}
+    progress::-webkit-progress-value {
+      background: red;
+    }
 
-progress::-webkit-progress-value {
-  background: red;
-}
-
-progress::-webkit-progress-bar {
-  background: blue;
-}
+    progress::-webkit-progress-bar {
+      background: blue;
+    }
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
