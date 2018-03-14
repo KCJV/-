@@ -7,6 +7,7 @@
 <div style="position: absolute; left: 128px; top: 0px"id="div1">You must register to continue.</div>
 <script>
 name="uknown"
+div1.color="white"
 div1.style.fontSize=32
 function onSignIn(googleUser) {
 var profile=googleUser.getBasicProfile()
@@ -15,7 +16,6 @@ console.log('Name: '+profile.getName())
 console.log('Image URL: '+profile.getImageUrl())
 console.log('Email: '+profile.getEmail()) // This is null if the 'email' scope is not present.
 div1.innerHTML="Hello "+profile.getName()
-div1.color="white"
 }
 setTimeout(()=>{
 document.title="Cubehash"
