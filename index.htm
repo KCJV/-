@@ -23,7 +23,7 @@ div1.innerHTML="Hello "+profile.getName()+ // This is the withdraw button.
 "<input value='Withdraw 1 BTC.'type='button'id='click'><br>"
 click.onclick=()=>{ // This is the progress bar.
 console.log("Taking progress.")
-div2.innerHTML='<progress id="btcprogress"value="0"qmax="10000"></progress>'
+div2.innerHTML='<progress id="btcprogress"value="0"max="10000"></progress>'
 setInterval(()=>{
 btcprogress.value++
 },1)
